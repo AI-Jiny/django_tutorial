@@ -1,7 +1,15 @@
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
+        <!--
+        하드 코딩 부분 제거
         <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+        -->
+        <!--
+        <li><a href="{% url 'detail' question.id %}">{{ question.question_text }}</a></li>
+        -->
+        <!-- app_name으로 상세 뷰 설정-->
+        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
