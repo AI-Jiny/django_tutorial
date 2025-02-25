@@ -1,0 +1,5 @@
+templates의 html에서 단순 문자열은 <!-- --> 로 주석 처리 되지만 태크는 {# #} 로 주석처리해야됨
+
+urls.py의 urlpatterns에서 마지막에 /를 안붙이면 패턴을 못찾음
+
+- settings.py의 commonmiddleware에서 APPEND_SLASH 옵션을 설정해서 바꿀 수 있는 것 같음
